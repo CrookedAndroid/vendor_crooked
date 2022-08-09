@@ -69,9 +69,9 @@ PRODUCT_PRODUCT_PROPERTIES += \
 
 # Copy over some StatiX assets
 PRODUCT_COPY_FILES += \
-    vendor/crooked/prebuilt/etc/init.statix.rc:system/etc/init/init.statix.rc \
-    vendor/crooked/prebuilt/etc/permissions/privapp-permissions-statix-product.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/privapp-permissions-statix-product.xml \
-    vendor/crooked/prebuilt/etc/permissions/privapp-permissions-statix-se.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/permissions/privapp-permissions-statix-se.xml
+    vendor/crooked/prebuilt/etc/init.crooked.rc:system/etc/init/init.crooked.rc \
+    vendor/crooked/prebuilt/etc/permissions/privapp-permissions-crooked-product.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/privapp-permissions-crooked-product.xml \
+    vendor/crooked/prebuilt/etc/permissions/privapp-permissions-crooked-se.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/permissions/privapp-permissions-crooked-se.xml
 
 # Compile SystemUI on device with `speed`.
 PRODUCT_PROPERTY_OVERRIDES += \

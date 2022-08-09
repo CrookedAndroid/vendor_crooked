@@ -17,7 +17,7 @@
 # CrookedAndroid fastboot update package
 
 # Build with colors
-include crooked/vendor/crooked/build/core/colors.mk
+include vendor/crooked/build/core/colors.mk
 
 CROOKED_TARGET_UPDATEPACKAGE := $(PRODUCT_OUT)/$(CROOKED_VERSION)-img.zip
 
