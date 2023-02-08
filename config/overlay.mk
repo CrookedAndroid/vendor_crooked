@@ -82,7 +82,11 @@ PRODUCT_PACKAGES += \
     QSOutline \
     QSTwoToneAccent \
     QSShaded \
-    QSCyberPunk
+    QSCyberPunk \
+    QSNeumorph \
+    QSReflected \
+    QSSurround \
+    QSThin 
 
 # Black theme
 PRODUCT_PACKAGES += \
