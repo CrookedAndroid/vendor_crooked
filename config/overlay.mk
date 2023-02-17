@@ -75,6 +75,14 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     NexusLauncherOverlay \
     PixelLauncherConfigOverlay
+    
+# QS Panel
+PRODUCT_PACKAGES += \
+    QSRoundedRectangle \
+    QSOutline \
+    QSTwoToneAccent \
+    QSShaded \
+    QSCyberPunk
 
 # Black theme
 PRODUCT_PACKAGES += \
