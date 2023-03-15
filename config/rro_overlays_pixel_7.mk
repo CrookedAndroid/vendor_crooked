@@ -16,4 +16,5 @@
 
 # Google Overlays
 PRODUCT_PACKAGES += \
-    ClearCallingSettingsOverlay2022 
+    ClearCallingSettingsOverlay2022 \
+    DarkBgOverlay
