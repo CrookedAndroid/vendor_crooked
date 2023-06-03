@@ -13,7 +13,7 @@ BUILD_TIME := $(shell date +%H%M)
 ## Versioning System
 # Set all versions
 CROOKED_BASE_NAME := CrookedAndroid
-CROOKED_BASE_VERSION := 3.0
+CROOKED_BASE_VERSION := 4.0
 CROOKED_PLATFORM_VERSION := t
 
 # Set Crooked build types
