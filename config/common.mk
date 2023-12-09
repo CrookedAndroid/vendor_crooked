@@ -118,3 +118,8 @@ endif
 # Google Faceunlock
 PRODUCT_PACKAGES += \
     PixelTrafficLightFaceOverlay
+
+# Inherit from rro_overlays config
+$(call inherit-product, vendor/crooked/config/rro_overlays.mk)
+# Inherit from rro_overlays config
+$(call inherit-product, vendor/crooked/config/telephony.mk)
