@@ -14,7 +14,7 @@ endif
 
 # Define some properties for GMS
 ifneq ($(TARGET_DOES_NOT_USE_GAPPS), true)
-$(call inherit-product-if-exists, vendor/gms/products/gms.mk)
+$(call inherit-product-if-exists, vendor/google/gms/products/gms.mk)
 # Anything including updatable_apex.mk should have done so by now.
 ifeq ($(TARGET_FLATTEN_APEX), false)
 $(call inherit-product-if-exists, vendor/partner_modules/build/mainline_modules.mk)
@@ -117,3 +117,12 @@ ifeq ($(TARGET_BUILD_VARIANT), user)
     PRODUCT_SYSTEM_SERVER_DEBUG_INFO := false
     WITH_DEXPREOPT_DEBUG_INFO := false
 endif
+
+# Google Faceunlock
+include vendor/google/faceunlock/device.mk
+
+PRODUCT_PACKAGES += \
+    SettingsGoogleFutureFaceEnroll
+
+PRODUCT_PACKAGES += \
+    PixelTrafficLightFaceOverlay
