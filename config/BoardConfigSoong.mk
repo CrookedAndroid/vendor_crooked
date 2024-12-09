@@ -14,6 +14,7 @@ SOONG_CONFIG_statixGlobalVars += \
     target_ld_shim_libs \
     target_libcameraservice_ext_lib \
     target_power_libperfmgr_mode_extension_lib \
+    target_powershare_node \
     target_process_sdk_version_override \
     target_surfaceflinger_udfps_lib
 
@@ -69,6 +70,7 @@ SOONG_CONFIG_statixGlobalVars_target_health_charging_control_stage_path := $(TAR
 SOONG_CONFIG_statixGlobalVars_target_health_charging_control_supports_bypass := $(TARGET_HEALTH_CHARGING_CONTROL_SUPPORTS_BYPASS)
 SOONG_CONFIG_statixGlobalVars_target_health_charging_control_supports_deadline := $(TARGET_HEALTH_CHARGING_CONTROL_SUPPORTS_DEADLINE)
 SOONG_CONFIG_statixGlobalVars_target_health_charging_control_supports_toggle := $(TARGET_HEALTH_CHARGING_CONTROL_SUPPORTS_TOGGLE)
+SOONG_CONFIG_statixGlobalVars_target_powershare_node := $(TARGET_POWERSHARE_NODE)
 ifneq ($(filter $(QSSI_SUPPORTED_PLATFORMS),$(TARGET_BOARD_PLATFORM)),)
 SOONG_CONFIG_statixQcomVars_qcom_display_headers_namespace := vendor/qcom/opensource/commonsys-intf/display
 else
