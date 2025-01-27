@@ -12,17 +12,8 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-<<<<<<<< HEAD:packages/overlays/font/FontDMSansOverlay/Android.bp
 runtime_resource_overlay {
     name: "FontDMSansOverlay",
     sdk_version: "current",
     product_specific: true,
-========
-aconfig_values {
-  name: "aconfig-values-ap4a-com.android.server.notification-all",
-  package: "com.android.server.notification",
-  srcs: [
-    "*_flag_values.textproto",
-  ]
->>>>>>>> 43c1a8bd (release: Bump aconfig flags extension to AP4A):release/aconfig/ap4a/com.android.server.notification/Android.bp
 }
