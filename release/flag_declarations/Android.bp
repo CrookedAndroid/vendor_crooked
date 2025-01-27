@@ -1,4 +1,4 @@
-// Copyright (C) 2022 StatiXOS
+// Copyright 2024 Google Inc. All rights reserved.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -12,17 +12,9 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-<<<<<<<< HEAD:packages/overlays/font/FontDMSansOverlay/Android.bp
-runtime_resource_overlay {
-    name: "FontDMSansOverlay",
-    sdk_version: "current",
-    product_specific: true,
-========
-aconfig_values {
-  name: "aconfig-values-ap4a-com.android.server.notification-all",
-  package: "com.android.server.notification",
-  srcs: [
-    "*_flag_values.textproto",
-  ]
->>>>>>>> 43c1a8bd (release: Bump aconfig flags extension to AP4A):release/aconfig/ap4a/com.android.server.notification/Android.bp
+build_flag_declarations {
+    name: "build_flags-build-release-statix",
+    srcs: [
+        "RELEASE_*.textproto",
+    ],
 }

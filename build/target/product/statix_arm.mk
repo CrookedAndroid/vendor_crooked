@@ -16,6 +16,14 @@ $(call inherit-product, build/target/product/aosp_arm.mk)
 
 include vendor/statix/build/target/product/statix_generic_target.mk
 
+<<<<<<<< HEAD:build/target/product/statix_arm.mk
 TARGET_USES_64_BIT_BINDER := true
 
 PRODUCT_NAME := statix_arm
+========
+values = [
+    # keep-sorted start numeric=yes
+    value("RELEASE_ACONFIG_VALUE_SETS", "aconfig_value_set-lineage-ap4a"),
+    # keep-sorted end
+]
+>>>>>>>> 43c1a8bd (release: Bump aconfig flags extension to AP4A):release/build_config/ap4a.scl
