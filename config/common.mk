@@ -111,3 +111,7 @@ ifeq ($(TARGET_BUILD_VARIANT), user)
     PRODUCT_SYSTEM_SERVER_DEBUG_INFO := false
     WITH_DEXPREOPT_DEBUG_INFO := false
 endif
+
+# Google Faceunlock
+PRODUCT_PACKAGES += \
+    PixelTrafficLightFaceOverlay
