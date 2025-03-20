@@ -351,6 +351,7 @@
         <item>device_personalization_services/NowPlaying__ambient_music_get_model_state_cooldown_seconds_cloud_search=9</item>
         <item>device_personalization_services/NowPlaying__ambient_music_index_manifest_17_09_02=3105:https://storage.googleapis.com/music-iq-db/updatable_db_v3/20241013-030037/manifest.json</item>
         <item>device_personalization_services/NowPlaying__ambient_music_matcher_match_threshold_17_09_02=1.0E-6</item>
+		<item>device_personalization_services/NowPlaying__ambient_music_notification_show_assistant_text=true</item>
         <item>device_personalization_services/NowPlaying__ambient_music_on_demand_enabled=true</item>
         <item>device_personalization_services/NowPlaying__ambient_music_on_demand_music_confidence=0.48</item>
         <item>device_personalization_services/NowPlaying__ambient_music_on_demand_search_use_new_opt_in_flow=false</item>
@@ -370,6 +371,7 @@
         <item>device_personalization_services/NowPlaying__handle_ambient_music_results_with_history=true</item>
         <item>device_personalization_services/NowPlaying__min_training_interval_millis=86400000</item>
         <item>device_personalization_services/NowPlaying__nnfp_v3_model_enabled=true</item>
+		<item>device_personalization_services/NowPlaying__now_playing_allowed=true</item>
         <item>device_personalization_services/NowPlaying__on_demand_enable_eager_prompt=true</item>
         <item>device_personalization_services/NowPlaying__on_demand_fingerprinter_being_setup_warning=true</item>
         <item>device_personalization_services/NowPlaying__on_demand_hide_if_fingerprinter_install_not_confirmed=true</item>
