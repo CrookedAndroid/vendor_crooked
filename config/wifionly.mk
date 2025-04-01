@@ -1,1 +1,1 @@
-PRODUCT_PACKAGE_OVERLAYS += vendor/statix/overlay/wifionly
+PRODUCT_PACKAGE_OVERLAYS += vendor/crooked/overlay/wifionly

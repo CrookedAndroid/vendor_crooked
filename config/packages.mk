@@ -55,4 +55,4 @@ PRODUCT_PACKAGES += \
     charger_res_images \
     charger_res_images_vendor_pixel
 
--include vendor/statix/config/overlay.mk
+-include vendor/crooked/config/overlay.mk

@@ -14,7 +14,7 @@
 
 $(call inherit-product, build/target/product/aosp_x86.mk)
 
-include vendor/statix/build/target/product/statix_generic_target.mk
+include vendor/crooked/build/target/product/statix_generic_target.mk
 
 TARGET_USES_64_BIT_BINDER := true
 

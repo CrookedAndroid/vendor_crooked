@@ -34,7 +34,7 @@ PRODUCT_SYSTEM_PROPERTIES += \
 ## Signing
 ifneq (eng,$(TARGET_BUILD_VARIANT))
     # Define security directory
-    PROD_CERTS := vendor/statix/build/target/product/security
+    PROD_CERTS := vendor/crooked/build/target/product/security
 
     # Display a cleaner build number even on userdebug builds
     ifeq (userdebug,$(TARGET_BUILD_VARIANT))

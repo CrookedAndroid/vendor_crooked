@@ -13,7 +13,7 @@ function breakfast()
     target=$1
     STATIX_DEVICES_ONLY="true"
     unset LUNCH_MENU_CHOICES
-    for f in `/bin/ls vendor/statix/vendorsetup.sh 2> /dev/null`
+    for f in `/bin/ls vendor/crooked/vendorsetup.sh 2> /dev/null`
         do
             echo "including $f"
             . $f
@@ -62,7 +62,7 @@ function cout()
 
 function repopick() {
     T=$(gettop)
-    $T/vendor/statix/build/tools/repopick.py $@
+    $T/vendor/crooked/build/tools/repopick.py $@
 }
 
 function sort-blobs-list() {
@@ -74,5 +74,5 @@ function aospmerge()
 {
     target_branch=$1
     T=$(gettop)
-    python3 $T/vendor/statix/scripts/merge-aosp.py $target_branch
+    python3 $T/vendor/crooked/scripts/merge-aosp.py $target_branch
 }

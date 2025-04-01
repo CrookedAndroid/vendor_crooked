@@ -4,7 +4,7 @@
 # SPDX-License-Identifier: Apache-2.0
 #
 
-include vendor/statix/build/core/utils.mk
+include vendor/crooked/build/core/utils.mk
 
 # Conditionally call QCOM makefiles
 ifeq ($(PRODUCT_USES_QCOM_HARDWARE), true)
@@ -22,7 +22,7 @@ $(call inherit-product-if-exists, vendor/partner_modules/build/mainline_modules_
 endif
 # Enable certified props overlay
 PRODUCT_COPY_FILES += \
-    vendor/statix/prebuilt/etc/overlay/config-system_ext.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/overlay/config/config.xml
+    vendor/crooked/prebuilt/etc/overlay/config-system_ext.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/overlay/config/config.xml
 endif
 
 ifeq ($(PRODUCT_GMS_CLIENTID_BASE),)
@@ -56,11 +56,11 @@ endif
 # Make some features conditional
 ifeq ($(ENABLE_GAMETOOLS), true)
 PRODUCT_COPY_FILES += \
-    vendor/statix/prebuilt/etc/sysconfig/game_service.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/sysconfig/game_service.xml
+    vendor/crooked/prebuilt/etc/sysconfig/game_service.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/sysconfig/game_service.xml
 endif
 ifneq ($(DISABLE_COLUMBUS), true)
 PRODUCT_COPY_FILES += \
-    vendor/statix/prebuilt/etc/sysconfig/quick_tap.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/sysconfig/quick_tap.xml
+    vendor/crooked/prebuilt/etc/sysconfig/quick_tap.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/sysconfig/quick_tap.xml
 endif
 
 # Enable support of one-handed mode
@@ -69,32 +69,32 @@ PRODUCT_PRODUCT_PROPERTIES += \
 
 # Copy over some StatiX assets
 PRODUCT_COPY_FILES += \
-    vendor/statix/prebuilt/etc/init.statix.rc:system/etc/init/init.statix.rc \
-    vendor/statix/prebuilt/etc/permissions/privapp-permissions-statix-product.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/privapp-permissions-statix-product.xml \
-    vendor/statix/prebuilt/etc/permissions/privapp-permissions-statix-se.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/permissions/privapp-permissions-statix-se.xml
+    vendor/crooked/prebuilt/etc/init.statix.rc:system/etc/init/init.statix.rc \
+    vendor/crooked/prebuilt/etc/permissions/privapp-permissions-statix-product.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/privapp-permissions-statix-product.xml \
+    vendor/crooked/prebuilt/etc/permissions/privapp-permissions-statix-se.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/permissions/privapp-permissions-statix-se.xml
 
 # Compile SystemUI on device with `speed`.
 PRODUCT_PROPERTY_OVERRIDES += \
     dalvik.vm.systemuicompilerfilter=speed
 
 # Packages
-include vendor/statix/config/packages.mk
+include vendor/crooked/config/packages.mk
 
 # Branding
-include vendor/statix/config/branding.mk
+include vendor/crooked/config/branding.mk
 
 # Bootanimation
-include vendor/statix/config/bootanimation.mk
+include vendor/crooked/config/bootanimation.mk
 
 # Fonts
-include vendor/statix/config/fonts.mk
+include vendor/crooked/config/fonts.mk
 
 # Themes
-include vendor/statix/config/themes.mk
+include vendor/crooked/config/themes.mk
 
 # Overlays
-PRODUCT_ENFORCE_RRO_EXCLUDED_OVERLAYS += vendor/statix/overlay
-DEVICE_PACKAGE_OVERLAYS += vendor/statix/overlay/common
+PRODUCT_ENFORCE_RRO_EXCLUDED_OVERLAYS += vendor/crooked/overlay
+DEVICE_PACKAGE_OVERLAYS += vendor/crooked/overlay/common
 
 # Artifact path requirements
 PRODUCT_ARTIFACT_PATH_REQUIREMENT_ALLOWED_LIST += \
