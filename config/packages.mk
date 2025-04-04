@@ -26,7 +26,7 @@ PRODUCT_PACKAGES += \
 
 # Camera
 PRODUCT_PACKAGES += \
-    Aperture
+    #Aperture
 
 # Preopt StatixSystemUI
 PRODUCT_DEXPREOPT_SPEED_APPS += \
@@ -54,5 +54,9 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     charger_res_images \
     charger_res_images_vendor_pixel
+
+RiMusic
+PRODUCT_PACKAGES += \
+    RiMusic
 
 -include vendor/crooked/config/overlay.mk
