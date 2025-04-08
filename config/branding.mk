@@ -4,32 +4,36 @@
 # SPDX-License-Identifier: Apache-2.0
 #
 
+CROOKED_DEVICE := $(patsubst %f,%,$(subst crooked_,,$(TARGET_PRODUCT)))
+
 # Set date and time
 BUILD_DATE := $(shell date +%Y%m%d)
+BUILD_TIME := $(shell date +%H%M)
 
 ## Versioning System
 # Set all versions
-STATIX_BASE_VERSION := v8.6
-STATIX_PLATFORM_VERSION := $(PLATFORM_VERSION)
+CROOKED_BASE_NAME := CrookedAndroid
+CROOKED_BASE_VERSION := 6.2
+CROOKED_PLATFORM_VERSION := $(PLATFORM_VERSION)
 
-ifndef STATIX_BUILD_TYPE
-    STATIX_BUILD_TYPE := UNOFFICIAL
+ifndef CROOKED_BUILD_TYPE
+    CROOKED_BUILD_TYPE := UNOFFICIAL
 endif
 
-STATIX_VERSION := $(TARGET_PRODUCT)-$(BUILD_DATE)-$(STATIX_PLATFORM_VERSION)-$(STATIX_BASE_VERSION)-$(STATIX_BUILD_TYPE)
+CROOKED_VERSION := $(TARGET_PRODUCT)-$(BUILD_DATE)-$(CROOKED_PLATFORM_VERSION)-$(CROOKED_BASE_VERSION)-$(CROOKED_BUILD_TYPE)
 
 # Fingerprint
-ROM_FINGERPRINT := StatiXOS/$(PLATFORM_VERSION)/$(STATIX_BUILD_TYPE)/$(BUILD_DATE)
+ROM_FINGERPRINT := CrookedAndroid/$(PLATFORM_VERSION)/$(STATIX_BUILD_TYPE)/$(BUILD_DATE)
 # Declare it's a StatiX build
-STATIX_BUILD := true
+CROOKED_BUILD := true
 
-# StatiXOS version properties
+# CrookedAndroid version properties
 PRODUCT_SYSTEM_PROPERTIES += \
-    ro.statix.version=$(STATIX_BASE_VERSION)-$(STATIX_BUILD_TYPE)-$(BUILD_DATE) \
-    ro.statix.base.version=$(STATIX_BASE_VERSION) \
-    ro.mod.version=$(BUILD_ID)-$(BUILD_DATE)-$(STATIX_BASE_VERSION) \
-    ro.statix.fingerprint=$(ROM_FINGERPRINT) \
-    ro.statix.buildtype=$(STATIX_BUILD_TYPE)
+    ro.crooked.version=$(CROOKED_BASE_VERSION)-$(CROOKED_BUILD_TYPE)-$(BUILD_DATE) \
+    ro.crooked.base.version=$(CROOKED_BASE_VERSION) \
+    ro.mod.version=$(BUILD_ID)-$(BUILD_DATE)-$(CROOKED_BASE_VERSION) \
+    ro.crooked.fingerprint=$(ROM_FINGERPRINT) \
+    ro.crooked.buildtype=$(CROOKED_BUILD_TYPE)
 
 ## Signing
 ifneq (eng,$(TARGET_BUILD_VARIANT))

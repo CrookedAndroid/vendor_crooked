@@ -55,7 +55,7 @@ PRODUCT_PACKAGES += \
     charger_res_images \
     charger_res_images_vendor_pixel
 
-RiMusic
+# RiMusic
 PRODUCT_PACKAGES += \
     RiMusic
 

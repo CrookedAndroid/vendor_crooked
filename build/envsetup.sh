@@ -11,7 +11,7 @@ EOF
 function breakfast()
 {
     target=$1
-    STATIX_DEVICES_ONLY="true"
+    crooked_DEVICES_ONLY="true"
     unset LUNCH_MENU_CHOICES
     for f in `/bin/ls vendor/crooked/vendorsetup.sh 2> /dev/null`
         do
@@ -30,8 +30,8 @@ function breakfast()
             # A buildtype was specified, assume a full device name
             lunch $target
         else
-            # This is probably just the StatiX model name
-            lunch statix_$target-userdebug
+            # This is probably just the crooked model name
+            lunch crooked_$target-userdebug
         fi
     fi
     return $?

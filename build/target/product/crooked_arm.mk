@@ -12,8 +12,10 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-$(call inherit-product, build/target/product/aosp_arm64.mk)
+$(call inherit-product, build/target/product/aosp_arm.mk)
 
-include vendor/crooked/build/target/product/statix_generic_target.mk
+include vendor/crooked/build/target/product/crooked_generic_target.mk
 
-PRODUCT_NAME := statix_arm64
+TARGET_USES_64_BIT_BINDER := true
+
+PRODUCT_NAME := crooked_arm

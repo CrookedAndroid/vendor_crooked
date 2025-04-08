@@ -4,38 +4,37 @@
 #
 
 #
-# Statix Release Package (Builds OTA and Fastboot packages)
+# CrookedAndroid Release Package (Builds OTA and Fastboot packages)
 #
 
 # Package names
-STATIX_TARGET_UPDATEPACKAGE := $(PRODUCT_OUT)/$(STATIX_VERSION)-img.zip
-STATIX_TARGET_PACKAGE := $(PRODUCT_OUT)/$(STATIX_VERSION).zip
+CROOKED_TARGET_UPDATEPACKAGE := $(PRODUCT_OUT)/$(CROOKED_VERSION)-img.zip
+CROOKED_TARGET_PACKAGE := $(PRODUCT_OUT)/$(CROOKED_VERSION).zip
 
-.PHONY: stxrelease
-stxrelease: $(INTERNAL_UPDATE_PACKAGE_TARGET) $(INTERNAL_OTA_PACKAGE_TARGET)
-	$(hide) ln -f $(INTERNAL_UPDATE_PACKAGE_TARGET) $(STATIX_TARGET_UPDATEPACKAGE)
-	$(hide) ln -f $(INTERNAL_OTA_PACKAGE_TARGET) $(STATIX_TARGET_PACKAGE)
-	@echo " "
-	@echo " "
-	@echo "                                                              :             "
-	@echo "          .                                                  t#,           ."
-	@echo "         ;W                               t                 ;##W.         ;W"
-	@echo "        f#E GEEEEEEEL         .. GEEEEEEELEj               :#L:WE        f#E"
-	@echo "      .E#f  ,;;L#K;;.        ;W, ,;;L#K;;.E#, :KW,      L .KG  ,#D     .E#f "
-	@echo "     iWW;      t#E          j##,    t#E   E#t  ,#W:   ,KG EE    ;#f   iWW;  "
-	@echo "    L##Lffi    t#E         G###,    t#E   E#t   ;#W. jWi f#.     t#i L##Lffi"
-	@echo "   tLLG##L     t#E       :E####,    t#E   E#t    i#KED.  :#G     GK tLLG##L "
-	@echo "     ,W#i      t#E      ;W#DG##,    t#E   E#t     L#W.    ;#L   LW.   ,W#i  "
-	@echo "    j#E.       t#E     j###DW##,    t#E   E#t   .GKj#K.    t#f f#:   j#E.   "
-	@echo "  .D#j         t#E    G##,,,,##,    t#E   E#t  iWf  i#K.    f#D#;  .D#j     "
-	@echo " ,WK,          t#E  :K#K:   L##,    t#E   E#t LK:    t#E     G#t  ,WK,      "
-	@echo " EG.            fE ;##D.    L##,     fE   E#t i       tDj     t   EG.       "
-	@echo " ,.              : ###,      L#,      #:   ,;.                     ,        "
-	@echo " "
+.PHONY: carelease
+carelease: $(INTERNAL_UPDATE_PACKAGE_TARGET) $(INTERNAL_OTA_PACKAGE_TARGET)
+	$(hide) ln -f $(INTERNAL_UPDATE_PACKAGE_TARGET) $(CROOKED_TARGET_UPDATEPACKAGE)
+	$(hide) ln -f $(INTERNAL_OTA_PACKAGE_TARGET) $(CROOKED_TARGET_PACKAGE)
+	@echo -e ${CL_GRN}"Success:" >&2
+
+	@echo -e ${CL_CYN}""
+	@echo -e ${CL_CYN}"   ______                 __            __"
+	@echo -e ${CL_CYN}"  / ____/________  ____  / /_____  ____/ /"
+	@echo -e ${CL_CYN}" / /   / ___/ __ \/ __ \/ //_/ _ \/ __  / "
+	@echo -e ${CL_CYN}"/ /___/ /  / /_/ / /_/ / ,< /  __/ /_/ /  "
+	@echo -e ${CL_CYN}"\______/   \____/\______/|_|\___/\__,_/ __"
+	@echo -e ${CL_CYN}"   /   |  ____  ____/ /________  (_)___/ /"
+	@echo -e ${CL_CYN}"  / /| | / __ \/ __  / ___/ __ \/ / __  / "
+	@echo -e ${CL_CYN}" / ___ |/ / / / /_/ / /  / /_/ / / /_/ /  "
+	@echo -e ${CL_CYN}"/_/  |_/_/ /_/\__,_/_/   \____/_/\__,_/   "
+	@echo -e ${CL_CYN}" "
+	@echo -e ${CL_YLW}"Device Name: $(TARGET_DEVICE)"
+	@echo -e ${CL_GRN}"========================================================================="
+	@echo "Fastboot: $(CROOKED_TARGET_UPDATEPACKAGE)" >&2
+	@echo "Size: `du -h $(CROOKED_TARGET_UPDATEPACKAGE) | cut -f 1`"
 	@echo "============================================================================"
-	@echo "Fastboot: $(STATIX_TARGET_UPDATEPACKAGE)" >&2
-	@echo "Size: `du -h $(STATIX_TARGET_UPDATEPACKAGE) | cut -f 1`"
+	@echo "OTA: $(CROOKED_TARGET_PACKAGE)" >&2
+	@echo "Size: `du -h $(CROOKED_TARGET_PACKAGE) | cut -f 1`"
 	@echo "============================================================================"
-	@echo "OTA: $(STATIX_TARGET_PACKAGE)" >&2
-	@echo "Size: `du -h $(STATIX_TARGET_PACKAGE) | cut -f 1`"
-	@echo "============================================================================"
+	@echo -e ${CL_GRN}"========================================================================="
+	@echo -e ${CL_RED}"Lets Get Crooked!"
