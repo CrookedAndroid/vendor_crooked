@@ -11,7 +11,7 @@ EOF
 function breakfast()
 {
     target=$1
-    crooked_DEVICES_ONLY="true"
+    CROOKED_DEVICES_ONLY="true"
     unset LUNCH_MENU_CHOICES
     for f in `/bin/ls vendor/crooked/vendorsetup.sh 2> /dev/null`
         do
